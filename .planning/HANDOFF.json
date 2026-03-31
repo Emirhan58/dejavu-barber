@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-03-31T23:50:44.619Z",
+  "phase": "1",
+  "phase_name": "Foundation & Design System",
+  "phase_dir": ".planning/phases/01-foundation-design-system",
+  "plan": null,
+  "task": null,
+  "total_tasks": 0,
+  "status": "paused",
+  "completed_tasks": [],
+  "remaining_tasks": [],
+  "blockers": [],
+  "human_actions_pending": [],
+  "decisions": [
+    {"decision": "Koyu kahverengi (#1C1410) ana arka plan tonu", "rationale": "Sicak, ahsap/deri hissi, klasik berber dukkan atmosferi", "phase": "1"},
+    {"decision": "Canli kirmizi (#E11D48) neon vurgu rengi", "rationale": "DEJAVU tabelasindaki kirmizi neon referans", "phase": "1"},
+    {"decision": "Display + Sans tipografi (Playfair Display + Inter/DM Sans)", "rationale": "Vintage basliklar ile modern govde dengesi", "phase": "1"},
+    {"decision": "Transparan → Solid sticky navbar", "rationale": "Hero gorseli tam gorunur, sonra navigasyon sabitlenir", "phase": "1"},
+    {"decision": "Tam ekran overlay mobil menu", "rationale": "Buyuk linkler, neon vurgulu, etkileyici his", "phase": "1"},
+    {"decision": "GSAP = scroll/timeline, Motion = UI gecisleri", "rationale": "Net sorumluluk ayrimi, paylasilan element yok", "phase": "1"},
+    {"decision": "3 tier animasyon: Full/Reduced/None", "rationale": "Mobilde performans korunur, 768px esik, matchMedia", "phase": "1"},
+    {"decision": "Lenis sadece desktop", "rationale": "Mobilde native scroll daha performansli", "phase": "1"},
+    {"decision": "Hafif grain overlay (~%4)", "rationale": "Vintage his verir ama okumay bozmaz", "phase": "1"},
+    {"decision": "Berber diregi ayiricilar + retro cerceveler", "rationale": "Vintage Turk berber estetigi", "phase": "1"},
+    {"decision": "Secici neon glow kullanimi", "rationale": "Sadece logo, CTA, scroll-spy, hero basligi — her yerde olursa etkisini kaybeder", "phase": "1"}
+  ],
+  "uncommitted_files": [],
+  "next_action": "/gsd:plan-phase 1 — Phase 1 context toplandi, simdi plan olusturulmali",
+  "context_notes": "Phase 1 discuss-phase tamamlandi. Tum 4 alan tartisildi (renk/tipografi, navbar/layout, animasyon siniri, doku/gorsel kimlik). CONTEXT.md olusturuldu ve commit edildi. Sonraki adim plan-phase ile detayli plan olusturmak."
+}
