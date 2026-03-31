@@ -1,0 +1,120 @@
+# Requirements: Dejavu Erkek Kuaforu
+
+**Defined:** 2026-04-01
+**Core Value:** Dejavu'nun fiziksel dukkan atmosferini dijitale tasiyan, musterileri ilk saniyede etkileyen ve WhatsApp'a yonlendiren profesyonel bir berber sitesi
+
+## v1 Requirements
+
+### Foundation
+
+- [ ] **FOUND-01**: Site Next.js 15 App Router + TypeScript ile calisir
+- [ ] **FOUND-02**: Tailwind CSS 4 ile responsive, mobile-first tasarim uygulanir
+- [ ] **FOUND-03**: GSAP + Motion (Framer Motion) animasyon altyapisi kurulur, sorumluluk alanlari net ayrilir
+- [ ] **FOUND-04**: Vintage Turk berber tasarim sistemi olusturulur (koyu tonlar, kirmizi/neon vurgular, altin/kremsi aksan, sicak kahverengi)
+- [ ] **FOUND-05**: 3 katmanli animasyon degradasyonu: full (desktop), reduced (mobil), none (prefers-reduced-motion)
+- [ ] **FOUND-06**: Lenis smooth scroll entegrasyonu
+- [ ] **FOUND-07**: Sticky navbar ile bolum navigasyonu ve scroll-spy
+
+### Content
+
+- [ ] **CONT-01**: Kullanici tam ekran hero bolumunde DEJAVU adini neon efektiyle gorur
+- [ ] **CONT-02**: Kullanici Hakkimizda bolumunde dukkan hikayesini ve ekip bilgisini gorur
+- [ ] **CONT-03**: Kullanici hizmetler bolumunde kategorize edilmis hizmet kartlarini fiyatlariyla gorur (sac kesim, sakal, cilt bakimi, agda, buhar, boyama)
+- [ ] **CONT-04**: Kullanici iletisim bolumunde Google Maps embed, adres, telefon ve calisma saatlerini gorur
+- [ ] **CONT-05**: Kullanici her sayfada WhatsApp floating butonunu gorur ve tiklayinca WhatsApp mesaji acilir (905397256886)
+- [ ] **CONT-06**: Tum isletme verileri (adres, telefon, hizmetler, fiyatlar, saatler) tek bir constants dosyasindan gelir
+
+### Gallery
+
+- [ ] **GALR-01**: Kullanici ayri /galeri sayfasinda dukkan fotograflarini grid/masonry layoutta gorur
+- [ ] **GALR-02**: Fotograflar Next.js Image ile optimize edilir (WebP, lazy loading, blur placeholder)
+- [ ] **GALR-03**: Ana sayfa ile galeri arasinda smooth sayfa gecis animasyonu vardir
+
+### Animations
+
+- [ ] **ANIM-01**: Kullanici ilk ziyarette DEJAVU neon intro animasyonu gorur (skippable, sessionStorage ile tekrar gosterilmez)
+- [ ] **ANIM-02**: Kullanici scroll ederken bolumlerin fade-in/slide-up ile ortaya ciktigini gorur
+- [ ] **ANIM-03**: Kullanici parallax arka plan katmanlarinin farkli hizlarda hareket ettigini gorur
+- [ ] **ANIM-04**: Kullanici desktop'ta duman/buhar parcacik efektlerini gorur (mobilde devre disi)
+- [ ] **ANIM-05**: Mobil kullanici sadece basit scroll reveal animasyonlarini gorur (parallax/parcacik yok)
+- [ ] **ANIM-06**: Neon glow hover efektleri butonlar ve basliklar uzerinde calisir
+
+### Visual
+
+- [ ] **VISL-01**: Site vintage Turk berber estetigi tasir — neon tabela hissi, retro cerceveler, berber diregi motifleri
+- [ ] **VISL-02**: Renk paleti dukkanin gercek atmosferini yansitir: koyu siyah/antrasit base, kirmizi/neon vurgular, altin/kremsi aksan
+- [ ] **VISL-03**: Arka plan dokularinda vintage his vardir (grain, texture overlay)
+
+### SEO & Deploy
+
+- [ ] **SEOD-01**: JSON-LD LocalBusiness/BarberShop structured data tum isletme bilgileriyle eklenir
+- [ ] **SEOD-02**: Turkce meta tags, Open Graph tags ve og:image dukkan fotografiyla eklenir
+- [ ] **SEOD-03**: Site Vercel'e deploy edilir ve canli URL'den erisilebilir
+- [ ] **SEOD-04**: Lighthouse mobil skoru 90+ hedeflenir
+
+## v2 Requirements
+
+### Enhancements
+
+- **ENHC-01**: Before/after image slider (oncesi-sonrasi karsilastirma)
+- **ENHC-02**: Instagram feed entegrasyonu (dukkanin Instagram'i varsa)
+- **ENHC-03**: Google Reviews widget
+- **ENHC-04**: Vercel Analytics entegrasyonu
+- **ENHC-05**: Sitemap ve robots.txt
+- **ENHC-06**: Custom 404 sayfasi
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| Online randevu/rezervasyon sistemi | Backend gerektirir, WhatsApp Turkiye'de zaten standart, sifir bakim maliyeti |
+| Blog / icerik yonetimi | Dukkan sahibi icerik uretmeyecek, bayat blog zarar verir |
+| CMS / admin paneli | Icerik nadiren degisir, developer 5 dakikada guncelleyebilir |
+| Kullanici hesaplari / giris | Statik tanitim sitesinde amaci yok |
+| E-ticaret / urun satisi | Urunler dukkanda satilir, online satis gereksiz |
+| Coklu dil destegi | Hedef kitle yerel Turkce konusuyor |
+| Canli chat widget | Sahip sac kesiyor, cevapsiz chat zarar verir |
+| Newsletter / email toplama | Kucuk kasaba berberi newsletter gondermez |
+
+## Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| FOUND-01 | — | Pending |
+| FOUND-02 | — | Pending |
+| FOUND-03 | — | Pending |
+| FOUND-04 | — | Pending |
+| FOUND-05 | — | Pending |
+| FOUND-06 | — | Pending |
+| FOUND-07 | — | Pending |
+| CONT-01 | — | Pending |
+| CONT-02 | — | Pending |
+| CONT-03 | — | Pending |
+| CONT-04 | — | Pending |
+| CONT-05 | — | Pending |
+| CONT-06 | — | Pending |
+| GALR-01 | — | Pending |
+| GALR-02 | — | Pending |
+| GALR-03 | — | Pending |
+| ANIM-01 | — | Pending |
+| ANIM-02 | — | Pending |
+| ANIM-03 | — | Pending |
+| ANIM-04 | — | Pending |
+| ANIM-05 | — | Pending |
+| ANIM-06 | — | Pending |
+| VISL-01 | — | Pending |
+| VISL-02 | — | Pending |
+| VISL-03 | — | Pending |
+| SEOD-01 | — | Pending |
+| SEOD-02 | — | Pending |
+| SEOD-03 | — | Pending |
+| SEOD-04 | — | Pending |
+
+**Coverage:**
+- v1 requirements: 29 total
+- Mapped to phases: 0
+- Unmapped: 29
+
+---
+*Requirements defined: 2026-04-01*
+*Last updated: 2026-04-01 after initial definition*
