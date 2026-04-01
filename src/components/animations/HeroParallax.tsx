@@ -10,8 +10,8 @@ export function HeroParallax() {
     () => {
       if (tier !== "full") return;
 
-      gsap.to(".hero-bg-image", {
-        yPercent: -15,
+      gsap.to(".hero-photo", {
+        yPercent: -8,
         ease: "none",
         scrollTrigger: {
           trigger: ".hero-section",

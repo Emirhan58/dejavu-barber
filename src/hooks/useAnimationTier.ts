@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 
 export type AnimationTier = "full" | "reduced" | "none";
+export type AnimationTierState = { tier: AnimationTier; ready: boolean };
 
 export function useAnimationTier(): AnimationTier {
   const [tier, setTier] = useState<AnimationTier>("reduced");

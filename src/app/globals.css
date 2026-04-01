@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  /* Renk Paleti */
-  --color-base-dark: #1C1410;
-  --color-base-medium: #211812;
-  --color-base-light: #150F0B;
-  --color-neon-red: #E11D48;
-  --color-gold: #D4A853;
-  --color-cream: #F5E6D0;
+  /* Renk Paleti — Dark luxury gold theme */
+  --color-base-dark: #0A0A0A;
+  --color-base-medium: #111111;
+  --color-base-light: #0F0F0F;
+  --color-neon-red: #C8A55A;
+  --color-gold: #C8A55A;
+  --color-cream: #E8E0D4;
   --color-white: #FAFAF9;
 
-  /* Neon Glow shadow tokenleri */
-  --shadow-neon: 0 0 10px #E11D48, 0 0 40px rgba(225, 29, 72, 0.3);
-  --shadow-neon-strong: 0 0 10px #E11D48, 0 0 40px #E11D48, 0 0 80px rgba(225, 29, 72, 0.2);
+  /* Gold Glow shadow tokenleri */
+  --shadow-neon: 0 0 6px rgba(200, 165, 90, 0.4), 0 0 16px rgba(200, 165, 90, 0.15);
+  --shadow-neon-strong: 0 0 8px rgba(200, 165, 90, 0.5), 0 0 24px rgba(200, 165, 90, 0.2);
 
   /* Font Families */
   --font-display: var(--font-playfair);
   --font-body: var(--font-inter);
 
   /* Spacing Scale */
-  --spacing-section: 6rem;
-  --spacing-section-mobile: 3rem;
+  --spacing-section: 8rem;
+  --spacing-section-mobile: 4rem;
 
   /* Max Content Width */
   --container-content: 1200px;
@@ -31,18 +31,28 @@
   --font-body: var(--font-inter);
 }
 
-/* Neon Glow Text */
+/* Gold Glow Text */
 .neon-glow {
   text-shadow:
-    0 0 7px #E11D48,
-    0 0 10px #E11D48,
-    0 0 21px #E11D48,
-    0 0 42px rgba(225, 29, 72, 0.5);
+    0 0 4px rgba(200, 165, 90, 0.5),
+    0 0 12px rgba(200, 165, 90, 0.2);
 }
 .neon-glow-subtle {
   text-shadow:
-    0 0 5px rgba(225, 29, 72, 0.5),
-    0 0 15px rgba(225, 29, 72, 0.2);
+    0 0 3px rgba(200, 165, 90, 0.3),
+    0 0 8px rgba(200, 165, 90, 0.12);
+}
+
+/* Intro screen — pure CSS, covers page before JS loads */
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #000;
+  pointer-events: none;
+}
+.intro-screen.hidden {
+  display: none;
 }
 
 /* Grain Overlay */
@@ -52,14 +62,14 @@
   inset: 0;
   z-index: 50;
   pointer-events: none;
-  opacity: 0.04;
+  opacity: 0.015;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
 /* Retro Card */
 .retro-card {
   position: relative;
-  border: 1px solid rgba(212, 168, 83, 0.3);
+  border: 1px solid rgba(200, 165, 90, 0.15);
 }
 .retro-card::before,
 .retro-card::after {
@@ -67,7 +77,7 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  border-color: #D4A853;
+  border-color: rgba(200, 165, 90, 0.4);
 }
 .retro-card::before {
   top: -1px;
@@ -93,8 +103,8 @@
 
 /* CTA Pulse Glow */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 5px rgba(225, 29, 72, 0.4); }
-  50% { box-shadow: 0 0 20px rgba(225, 29, 72, 0.8), 0 0 40px rgba(225, 29, 72, 0.3); }
+  0%, 100% { box-shadow: 0 0 4px rgba(200, 165, 90, 0.25); }
+  50% { box-shadow: 0 0 10px rgba(200, 165, 90, 0.4), 0 0 20px rgba(200, 165, 90, 0.15); }
 }
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
@@ -103,25 +113,38 @@
 /* Smoke/Steam Particles */
 @keyframes smoke-rise {
   0% {
-    transform: translate3d(0, 0, 0) scale(0.8);
+    transform: translate3d(0, 0, 0) scale(0.9);
     opacity: 0;
   }
-  20% {
+  10% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.35;
+  }
+  70% {
     opacity: 0.15;
   }
   100% {
-    transform: translate3d(20px, -120px, 0) scale(1.5);
+    transform: translate3d(25px, -220px, 0) scale(2);
     opacity: 0;
   }
 }
 
 .smoke-particle {
   position: absolute;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 35%, rgba(255,255,255,0.04) 60%, transparent 75%);
   border-radius: 50%;
-  filter: blur(20px);
+  filter: blur(8px);
   animation: smoke-rise 6s ease-out infinite;
   will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smoke-particle {
+    animation: none;
+    display: none;
+  }
 }
 
 /* Neon Hover Glow - for text elements */
@@ -130,9 +153,8 @@
 }
 .neon-hover-glow:hover {
   text-shadow:
-    0 0 7px #E11D48,
-    0 0 10px #E11D48,
-    0 0 21px #E11D48;
+    0 0 4px rgba(200, 165, 90, 0.5),
+    0 0 12px rgba(200, 165, 90, 0.2);
 }
 
 /* Neon Hover Glow - for SVG elements (text-shadow doesn't work on SVG, use filter instead) */
@@ -140,5 +162,5 @@
   transition: filter 0.25s ease;
 }
 .neon-hover-glow-svg:hover {
-  filter: drop-shadow(0 0 7px #E11D48) drop-shadow(0 0 10px #E11D48);
+  filter: drop-shadow(0 0 4px rgba(200, 165, 90, 0.5)) drop-shadow(0 0 10px rgba(200, 165, 90, 0.2));
 }

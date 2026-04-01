@@ -1,7 +1,7 @@
+"use client";
 import Image from "next/image";
 import { Logo } from "@/components/ui/Logo";
 import { ScrollDownArrow } from "@/components/ui/ScrollDownArrow";
-import { SmokeParticles } from "@/components/animations/SmokeParticles";
 import { HeroParallax } from "@/components/animations/HeroParallax";
 import { BUSINESS, CTA_TEXT, WHATSAPP_MESSAGE } from "@/lib/constants";
 
@@ -9,39 +9,74 @@ export function Hero() {
   const ctaUrl = `${BUSINESS.whatsappUrl}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
-    <section className="hero-section relative flex min-h-screen flex-col items-center justify-center">
-      <Image
-        src="/images/hero/dejavu-kuafor.jpg"
-        alt="Salon Dejavu"
-        fill
-        priority
-        placeholder="blur"
-        blurDataURL="data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAdEAACAgEFAAAAAAAAAAAAAAABEQACBAMSISPB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAABADH/2gAMAwEAAhEDEQA/AIl8jGOFap0e0g13NrlvyIiFXa7/2Q=="
-        className="hero-bg-image object-cover"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-black/75" />
-      <SmokeParticles />
+    <section className="hero-section relative flex min-h-screen bg-base-dark overflow-hidden">
       <HeroParallax />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-4">
-        <div className="neon-hover-glow-svg block md:hidden">
-          <Logo height={60} />
+      {/* Content grid — text left, photo right */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center w-full max-w-[var(--container-content)] mx-auto px-6">
+        {/* Left — text */}
+        <div className="flex-1 flex flex-col justify-center py-32 md:py-0 md:pr-12">
+          <div className="mb-6 md:hidden">
+            <Logo height={50} />
+          </div>
+          <h1 className="font-display font-bold text-cream text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
+            <span className="text-gold">TARZINI</span>{" "}
+            BIZE BIRAK
+          </h1>
+          <p className="mt-6 text-cream/60 text-base md:text-lg max-w-lg font-body leading-relaxed">
+            Susehri&apos;nin berber salonu. Sac kesiminden sakal tasarimina, profesyonel erkek bakiminda fark yaratiyoruz.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href={ctaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-gold text-base-dark font-bold uppercase tracking-widest hover:brightness-110 transition-all rounded text-sm"
+            >
+              {CTA_TEXT}
+            </a>
+            <a
+              href="#hizmetler"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("hizmetler")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-8 py-3 border border-cream/30 text-cream font-bold uppercase tracking-widest hover:border-gold hover:text-gold transition-colors rounded text-sm"
+            >
+              Hizmetler
+            </a>
+          </div>
         </div>
-        <div className="neon-hover-glow-svg hidden md:block">
-          <Logo height={120} />
+
+        {/* Right — photo */}
+        <div className="relative flex-1 hidden md:flex items-center justify-end min-h-screen">
+          <div className="relative w-full h-[80vh] max-w-[500px]">
+            <Image
+              src="/images/hero/dejavu-kuafor.jpg"
+              alt="Salon Dejavu"
+              fill
+              priority
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAX/xAAdEAACAgEFAAAAAAAAAAAAAAABEQACBAMSISPB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/xAAWEQEBAQAAAAAAAAAAAAAAAAABADH/2gAMAwEAAhEDEQA/AIl8jGOFap0e0g13NrlvyIiFXa7/2Q=="
+              className="hero-photo object-cover grayscale"
+              sizes="(max-width: 768px) 0vw, 50vw"
+              style={{ maskImage: "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)", maskComposite: "intersect", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)", WebkitMaskComposite: "source-in" } as React.CSSProperties}
+            />
+          </div>
         </div>
-        <p className="mt-4 text-lg md:text-xl text-cream font-body tracking-wide">
-          {BUSINESS.subtitle}
-        </p>
-        <a
-          href={ctaUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 px-8 py-3 border-2 border-neon-red text-neon-red font-bold uppercase tracking-widest hover:bg-neon-red hover:text-white transition-colors animate-pulse-glow neon-hover-glow"
-        >
-          {CTA_TEXT}
-        </a>
+      </div>
+
+      {/* Mobile hero image — below text */}
+      <div className="absolute inset-0 md:hidden pointer-events-none">
+        <Image
+          src="/images/hero/dejavu-kuafor.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover grayscale opacity-20"
+          sizes="(max-width: 768px) 100vw, 0vw"
+          aria-hidden="true"
+        />
       </div>
 
       <ScrollDownArrow />

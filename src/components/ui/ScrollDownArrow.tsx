@@ -11,7 +11,7 @@ export function ScrollDownArrow() {
           .getElementById("hakkimizda")
           ?.scrollIntoView({ behavior: "smooth" })
       }
-      className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-neon-red neon-glow cursor-pointer border-none bg-transparent p-2"
+      className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gold cursor-pointer border-none bg-transparent p-2"
     >
       <svg
         viewBox="0 0 24 24"

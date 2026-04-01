@@ -22,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Salon Dejavu — Sac ve Sakal Tasarimi",
+  title: "Salon Dejavu \u2014 Sac ve Sakal Tasarimi",
   description:
     "Susehri/Sivas'taki Salon Dejavu Erkek Kuaforu. Profesyonel sac ve sakal tasarimi hizmetleri.",
 };

@@ -23,20 +23,23 @@ export function ScrollReveal({
       if (tier === "none") return;
 
       const targets = stagger
-        ? gsap.utils.toArray(".scroll-reveal-item", container.current!)
+        ? gsap.utils.toArray<HTMLElement>(".scroll-reveal-item", container.current!)
         : [container.current!];
 
       if (targets.length === 0) return;
 
-      gsap.from(targets, {
-        opacity: 0,
-        y: 40,
+      // Set initial hidden state via GSAP (not CSS) so content is visible without JS
+      gsap.set(targets, { opacity: 0, y: 40 });
+
+      gsap.to(targets, {
+        opacity: 1,
+        y: 0,
         duration: 0.8,
         ease: "power2.out",
         stagger: stagger ? 0.12 : 0,
         scrollTrigger: {
           trigger: container.current!,
-          start: "top 80%",
+          start: "top 85%",
           toggleActions: "play none none none",
         },
       });

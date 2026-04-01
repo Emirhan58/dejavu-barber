@@ -1,13 +1,9 @@
 export function SectionDivider() {
   return (
-    <div className="h-2 w-full overflow-hidden" aria-hidden="true">
-      <div
-        className="h-full w-[200%] animate-barber-slide"
-        style={{
-          background:
-            "repeating-linear-gradient(120deg, #E11D48 0px, #E11D48 20px, #FAFAF9 20px, #FAFAF9 40px, #3B82F6 40px, #3B82F6 60px)",
-        }}
-      />
+    <div className="flex items-center justify-center py-4" aria-hidden="true">
+      <div className="h-px w-16 bg-gold/30" />
+      <div className="mx-3 h-1.5 w-1.5 rotate-45 bg-gold/50" />
+      <div className="h-px w-16 bg-gold/30" />
     </div>
   );
 }

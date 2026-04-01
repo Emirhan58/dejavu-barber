@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { NAV_ITEMS, CTA_TEXT, BUSINESS } from "@/lib/constants";
+import { Logo } from "@/components/ui/Logo";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -35,8 +36,9 @@ export function MobileMenu({ isOpen, onClose, activeSection }: MobileMenuProps) 
           transition={{ duration: 0.3 }}
           className="fixed inset-0 z-50 bg-base-dark flex flex-col"
         >
-          {/* Header with close button */}
-          <div className="flex items-center justify-end h-12 px-4">
+          {/* Header with logo and close button */}
+          <div className="flex items-center justify-between h-12 px-4">
+            <Logo height={28} />
             <button
               onClick={onClose}
               aria-label="Menuyu kapat"
@@ -78,7 +80,7 @@ export function MobileMenu({ isOpen, onClose, activeSection }: MobileMenuProps) 
                     onClick={(e) => handleLinkClick(e, item.href)}
                     className={`block py-3 px-6 text-base font-bold text-cream uppercase tracking-wider ${
                       isActive
-                        ? "border-l-2 border-neon-red text-white"
+                        ? "border-l-2 border-gold text-white"
                         : "border-l-2 border-transparent"
                     }`}
                   >
@@ -100,7 +102,7 @@ export function MobileMenu({ isOpen, onClose, activeSection }: MobileMenuProps) 
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={onClose}
-                className="block w-full bg-neon-red text-white text-center font-bold uppercase tracking-wider py-3 rounded"
+                className="block w-full bg-gold text-base-dark text-center font-bold uppercase tracking-wider py-3 rounded"
               >
                 {CTA_TEXT}
               </a>

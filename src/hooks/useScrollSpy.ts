@@ -1,37 +1,37 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 export function useScrollSpy(
   sectionIds: string[],
-  offset: number = 100
+  offset: number = 80
 ): string | null {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const idsRef = useRef(sectionIds);
-  idsRef.current = sectionIds;
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries.filter((e) => e.isIntersecting);
-        if (visibleEntries.length > 0) {
-          const closest = visibleEntries.reduce((prev, curr) =>
-            curr.intersectionRatio > prev.intersectionRatio ? curr : prev
-          );
-          setActiveId(closest.target.id);
-        }
-      },
-      {
-        rootMargin: `-${offset}px 0px -50% 0px`,
-        threshold: [0, 0.25, 0.5, 0.75, 1],
+    function onScroll() {
+      // If at bottom of page, activate last section
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+      if (atBottom) {
+        setActiveId(sectionIds[sectionIds.length - 1]);
+        return;
       }
-    );
 
-    idsRef.current.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
+      let current: string | null = null;
+      const threshold = window.innerHeight * 0.4;
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= threshold) {
+          current = id;
+        }
+      }
+      setActiveId(current);
+    }
 
-    return () => observer.disconnect();
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, [sectionIds, offset]);
 
   return activeId;

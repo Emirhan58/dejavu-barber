@@ -7,7 +7,8 @@ import { SectionDivider } from "@/components/layout/SectionDivider";
 
 export default function Home() {
   return (
-    <IntroOverlay>
+    <>
+      <IntroOverlay />
       <Hero />
       <SectionDivider />
       <About />
@@ -15,6 +16,6 @@ export default function Home() {
       <Services />
       <SectionDivider />
       <Contact />
-    </IntroOverlay>
+    </>
   );
 }

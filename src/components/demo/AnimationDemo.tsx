@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { gsap, useGSAP } from "@/lib/gsap-config";
 import { motion } from "motion/react";
 import { useAnimationTier } from "@/hooks/useAnimationTier";
@@ -7,11 +7,18 @@ import { useAnimationTier } from "@/hooks/useAnimationTier";
 export function AnimationDemo() {
   const container = useRef<HTMLDivElement>(null);
   const tier = useAnimationTier();
+  const [ready, setReady] = useState(false);
 
-  // GSAP animation — fade-in on mount (GSAP sorumluluk alani)
+  // Wait one frame after mount so tier has stabilized
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setReady(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  // GSAP animation — fade-in on mount (only after tier is stable)
   useGSAP(
     () => {
-      if (tier === "none") return;
+      if (!ready || tier === "none") return;
 
       gsap.from(".gsap-fade-item", {
         opacity: 0,
@@ -21,7 +28,7 @@ export function AnimationDemo() {
         ease: "power2.out",
       });
     },
-    { scope: container, dependencies: [tier] }
+    { scope: container, dependencies: [ready] }
   );
 
   return (
@@ -39,6 +46,7 @@ export function AnimationDemo() {
           <div
             key={text}
             className="gsap-fade-item retro-card p-6 bg-base-medium text-cream"
+            style={!ready ? { opacity: 0 } : undefined}
           >
             <p className="font-body text-base">{text}</p>
             <p className="text-sm text-gold mt-2">Tier: {tier}</p>
@@ -46,7 +54,7 @@ export function AnimationDemo() {
         ))}
       </div>
 
-      {/* Motion controlled elements — AYRI elementlar, GSAP ile paylasim YOK */}
+      {/* Motion controlled elements */}
       <div className="max-w-[var(--container-content)] mx-auto px-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
         {["Motion Hover 1", "Motion Hover 2"].map((text) => (
           <motion.div
