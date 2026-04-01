@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { NAV_ITEMS, CTA_TEXT, BUSINESS } from "@/lib/constants";
+import { Logo } from "@/components/ui/Logo";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { MobileMenu } from "./MobileMenu";
 
@@ -54,8 +55,8 @@ export function Navbar() {
         {/* Desktop navbar */}
         <div className="hidden md:flex items-center justify-between h-16 max-w-[var(--container-content)] mx-auto px-6">
           {/* Logo */}
-          <Link href="/" className="font-display text-lg text-white neon-glow">
-            DEJAVU
+          <Link href="/" className="flex items-center neon-hover-glow">
+            <Logo height={36} />
           </Link>
 
           {/* Nav items */}
@@ -91,7 +92,7 @@ export function Navbar() {
             href={BUSINESS.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-neon-red text-white text-sm font-bold uppercase tracking-wider px-4 py-2 rounded hover:brightness-110 transition-all"
+            className="bg-neon-red text-white text-sm font-bold uppercase tracking-wider px-4 py-2 rounded hover:brightness-110 transition-all neon-hover-glow"
           >
             {CTA_TEXT}
           </a>
@@ -100,11 +101,8 @@ export function Navbar() {
         {/* Mobile navbar */}
         <div className="flex md:hidden items-center justify-between h-12 px-4">
           {/* Logo */}
-          <Link
-            href="/"
-            className="font-display text-base text-white neon-glow"
-          >
-            DEJAVU
+          <Link href="/" className="flex shrink-0 items-center" style={{ minWidth: 80 }}>
+            <Logo height={28} />
           </Link>
 
           {/* Hamburger */}
