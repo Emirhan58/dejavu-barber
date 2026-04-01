@@ -1,4 +1,8 @@
+"use client";
+
+import { motion } from "motion/react";
 import { RetroCard } from "@/components/ui/RetroCard";
+import { useAnimationTier } from "@/hooks/useAnimationTier";
 
 function getServiceIcon(icon: string) {
   const props = {
@@ -120,13 +124,24 @@ export function ServiceCard({
   description: string;
   icon: string;
 }) {
+  const tier = useAnimationTier();
+
   return (
-    <RetroCard>
-      <div className="flex flex-col items-center text-center">
-        <div className="mb-3 text-cream">{getServiceIcon(icon)}</div>
-        <h3 className="text-base font-bold text-cream mb-2">{name}</h3>
-        <p className="text-sm text-cream/70">{description}</p>
-      </div>
-    </RetroCard>
+    <motion.div
+      whileHover={
+        tier !== "none"
+          ? { y: -3, boxShadow: "0 8px 30px rgba(0,0,0,0.4)" }
+          : undefined
+      }
+      transition={{ duration: 0.2, ease: "easeOut" }}
+    >
+      <RetroCard>
+        <div className="flex flex-col items-center text-center">
+          <div className="mb-3 text-cream">{getServiceIcon(icon)}</div>
+          <h3 className="text-base font-bold text-cream mb-2">{name}</h3>
+          <p className="text-sm text-cream/70">{description}</p>
+        </div>
+      </RetroCard>
+    </motion.div>
   );
 }

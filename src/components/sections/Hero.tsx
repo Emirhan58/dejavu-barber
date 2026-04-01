@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Logo } from "@/components/ui/Logo";
 import { ScrollDownArrow } from "@/components/ui/ScrollDownArrow";
 import { SmokeParticles } from "@/components/animations/SmokeParticles";
+import { HeroParallax } from "@/components/animations/HeroParallax";
 import { BUSINESS, CTA_TEXT, WHATSAPP_MESSAGE } from "@/lib/constants";
 
 export function Hero() {
@@ -21,6 +22,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/75" />
       <SmokeParticles />
+      <HeroParallax />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         <div className="neon-hover-glow-svg block md:hidden">

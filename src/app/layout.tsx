@@ -4,6 +4,7 @@ import { AnimationProvider } from "@/components/providers/AnimationProvider";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { Navbar } from "@/components/layout/Navbar";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { PageTransition } from "@/components/animations/PageTransition";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -38,7 +39,9 @@ export default function RootLayout({
           <SmoothScrollProvider>
             <div className="grain-overlay">
               <Navbar />
-              <main>{children}</main>
+              <main>
+                <PageTransition>{children}</PageTransition>
+              </main>
               <WhatsAppButton />
             </div>
           </SmoothScrollProvider>
