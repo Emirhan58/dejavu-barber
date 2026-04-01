@@ -15,10 +15,7 @@ export function Hero() {
       {/* Content grid — text left, photo right */}
       <div className="relative z-10 flex flex-col md:flex-row items-center w-full max-w-[var(--container-content)] mx-auto px-6">
         {/* Left — text */}
-        <div className="flex-1 flex flex-col justify-center py-32 md:py-0 md:pr-12">
-          <div className="mb-6 md:hidden">
-            <Logo height={50} />
-          </div>
+        <div className="flex-1 flex flex-col items-center text-center md:items-start md:text-left justify-center py-32 md:py-0 md:pr-12">
           <h1 className="font-display font-bold text-cream text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
             <span className="text-gold">TARZINI</span>{" "}
             BIZE BIRAK
@@ -73,7 +70,7 @@ export function Hero() {
           alt=""
           fill
           priority
-          className="object-cover grayscale opacity-20"
+          className="object-cover grayscale opacity-[0.08]"
           sizes="(max-width: 768px) 100vw, 0vw"
           aria-hidden="true"
         />
