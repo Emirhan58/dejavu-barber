@@ -29,6 +29,14 @@ revised: 2026-04-01
 
 ---
 
+## Focal Point
+
+Primary focal point: hero title "DEJAVU" in Playfair Display at 64px/40px (desktop/mobile) with neon-glow-strong text-shadow — first element the eye reaches on page load. White (#FAFAF9) base text color with #E11D48 neon glow radiating outward. Centered in viewport, positioned after transparent navbar.
+
+**Source:** CONTEXT.md locked decisions (DEJAVU neon tabela hissi, hero basligi neon glow), added per checker FLAG on Dimension 2 (Visuals).
+
+---
+
 ## Spacing Scale
 
 Declared values (all multiples of 4):
@@ -42,13 +50,13 @@ Declared values (all multiples of 4):
 | xl | 32px | Layout gaps between components |
 | 2xl | 48px | Section vertical padding (mobile: --spacing-section-mobile maps to 3rem), mobile navbar height |
 | 3xl | 64px | Page-level spacing, desktop navbar height |
-| 4xl | 96px | Section vertical padding (desktop: --spacing-section maps to 6rem) |
 
 Exceptions:
+- **96px desktop section vertical padding:** 96px (6rem) is used for desktop section vertical padding (--spacing-section) despite not being in the standard spacing set {4, 8, 16, 24, 32, 48, 64}. Justification: the full-bleed vintage barber aesthetic requires generous visual breathing room between content sections at the 1200px+ content width. The standard maximum of 64px produces insufficient vertical rhythm at a 1440px viewport — sections feel cramped rather than cinematic. 96px preserves the spacious, high-end salon atmosphere that matches the reference site (emirhankaya.vercel.app) quality bar. This value is defined as a dedicated semantic token (--spacing-section) and is NOT added to the general spacing scale to prevent casual misuse.
 - Touch targets on mobile: minimum 44x44px hit area for all tappable elements (navbar links, menu items, WhatsApp CTA). 44px is not a spacing token but a minimum constraint on interactive element dimensions.
 - Full-width sections: 0px horizontal padding on section wrappers; content constrained by max-width 1200px (--container-content) with 16px horizontal padding.
 
-**Source:** Claude's discretion (CONTEXT.md delegated exact spacing scale). Revision note: mobile navbar height changed from 56px to 48px to align with the 2xl spacing token.
+**Source:** Claude's discretion (CONTEXT.md delegated exact spacing scale). Revision note: mobile navbar height changed from 56px to 48px to align with the 2xl spacing token. 96px moved from scale to justified exception per checker BLOCK on Dimension 5.
 
 ---
 
@@ -215,7 +223,7 @@ All icon-only interactive elements MUST have an explicit `aria-label` attribute:
 | Page structure | Full-width sections, each 100vw |
 | Content max-width | 1200px (--container-content) centered |
 | Content padding | 16px horizontal (mobile), 24px horizontal (tablet+) |
-| Section padding | 48px vertical (mobile), 96px vertical (desktop) |
+| Section padding | 48px vertical (mobile), 96px vertical (desktop) — see spacing exceptions for 96px justification |
 | Alternating backgrounds | Section 1: #1C1410, Section 2: #211812, Section 3: #150F0B, repeat |
 | Footer | Contact section doubles as footer — no separate footer component |
 | Copyright | Single line below contact section, 14px Label size, centered |
