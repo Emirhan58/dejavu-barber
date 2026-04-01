@@ -12,20 +12,19 @@ Dejavu'nun fiziksel dukkan atmosferini dijitale tasiyan, musterileri ilk saniyed
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Hibrit sayfa yapisi — ana sayfa scroll + galeri ayri sayfa (Validated in Phase 2)
+- [x] Hero bolumu — tam ekran, dukkan adi, neon-styled text (Validated in Phase 2)
+- [x] Hizmetler bolumu — kategorize edilmis hizmet kartlari (Validated in Phase 2)
+- [x] Galeri sayfasi — dukkan fotograflari, next/image optimizasyonu, blur placeholder (Validated in Phase 2)
+- [x] Randevu butonu — WhatsApp yonlendirme floating buton (Validated in Phase 2)
+- [x] Iletisim/konum bolumu — Google Maps embed, adres, telefon, calisma saatleri (Validated in Phase 2)
 
 ### Active
 
-- [ ] Hibrit sayfa yapisi — ana sayfa scroll + galeri ayri sayfa
 - [ ] Next.js 15 (App Router) + TypeScript + Tailwind CSS 4
 - [ ] Framer Motion + GSAP animasyon sistemi (portfolio kalitesinde tam gaz animasyonlar)
 - [ ] Vintage/klasik Turk berber estegi — sicak, samimi, neon tabela havasi
 - [ ] Sadece Turkce — tek dil
-- [ ] Hero bolumu — tam ekran, dukkan adi, etkileyici giris animasyonu
-- [ ] Hizmetler + fiyat listesi bolumu — sac kesim, sakal, cilt bakimi vb.
-- [ ] Galeri sayfasi — dukkan fotograflari, oncesi-sonrasi kesimler
-- [ ] Randevu butonu — WhatsApp yonlendirme (0539 725 68 86)
-- [ ] Iletisim/konum bolumu — Google Maps embed, adres, telefon, calisma saatleri
 - [ ] Scroll animasyonlari, parallax, parcacik efektleri, intro animasyon
 - [ ] Mobilde azaltilmis animasyonlar (performans korunur)
 - [ ] Responsive / mobile-first yaklasim
@@ -92,4 +91,4 @@ Dejavu'nun fiziksel dukkan atmosferini dijitale tasiyan, musterileri ilk saniyed
 | Vintage Turk berber temas | Dukkanin gercek atmosferini dijitale tasiyor, samimi ve otantik | — Pending |
 
 ---
-*Last updated: 2026-04-01 after initialization*
+*Last updated: 2026-04-01 after Phase 2 completion*
