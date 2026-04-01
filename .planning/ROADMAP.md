@@ -27,12 +27,12 @@ A 4-phase build that establishes the technical foundation and vintage barber des
   3. The vintage barber design system is visible: dark base colors, red/neon accent variables, gold/cream accents, texture overlays, retro border styles -- applied to a sample layout
   4. The three-tier animation hook works: full effects on desktop, reduced on mobile, none with prefers-reduced-motion -- verifiable by toggling browser settings
   5. Lenis smooth scroll is active and navbar scrolls to section anchors with scroll-spy highlighting
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
-- [ ] 01-03: TBD
+- [ ] 01-01-PLAN.md — Next.js 15 proje kurulumu ve vintage Turk berber tasarim sistemi (tokens, fontlar, gorsel motifler)
+- [ ] 01-02-PLAN.md — GSAP + Motion animasyon altyapisi ve uc katmanli degradasyon sistemi
+- [ ] 01-03-PLAN.md — Lenis smooth scroll, sticky navbar, scroll-spy ve mobil menu
 
 ### Phase 2: Content Sections & Gallery
 **Goal**: Users see a complete, functional barber shop website with all sections filled with real business data, all photos optimized, and a working gallery page -- just without fancy animations
