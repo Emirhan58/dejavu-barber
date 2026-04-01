@@ -55,14 +55,14 @@ Source: globals.css --spacing-section / --spacing-section-mobile tokens.
 | Role | Size | Weight | Line Height | Font | Usage |
 |------|------|--------|-------------|------|-------|
 | Body | 16px (text-base) | 400 (normal) | 1.5 | Inter | Paragraphs, descriptions, service card text, contact info |
-| Label | 14px (text-sm) | 700 (bold) | 1.4 | Inter | Filter buttons, category labels, working hours, small annotations |
+| Label | 14px (text-sm) | 700 (bold) | 1.4 | Inter | Filter buttons, category labels, working hours, small annotations, copyright line (50% opacity for visual differentiation) |
 | Heading | 24px (text-2xl) | 700 (bold) | 1.2 | Playfair Display | Section titles (Hakkimizda, Hizmetler, Iletisim), category headings |
 | Display | 36px mobile / 48px desktop (text-4xl / text-5xl) | 700 (bold) | 1.1 | Playfair Display | Hero slogan only |
 
 Additional rules:
 - CTA buttons: Inter 700, 14px, uppercase, letter-spacing 0.15em (tracking-widest)
 - Service card title: Inter 700, 16px (text-base font-bold)
-- Copyright line: Inter 400, 12px (text-xs)
+- Copyright line: Label slot (text-sm, 14px, Inter 400, 50% opacity via cream/50 for visual differentiation from other Label uses)
 - Neon glow class (.neon-glow) applied ONLY to: DEJAVU logo, hero slogan, scroll-down arrow. NOT on section headings, service cards, or footer.
 
 Source: Phase 1 CONTEXT.md typography decisions, layout.tsx font weights.
@@ -188,7 +188,7 @@ Source: globals.css @theme tokens, Phase 1 CONTEXT.md neon glow usage rules.
     - Working hours: weekdays + sunday, with clock icon prefix
     - WhatsApp CTA: Secondary link "WhatsApp ile yazin" with WhatsApp icon
 - Mobile: Single column (map ustte, info altta)
-- Copyright: Full-width at very bottom, text-xs, text-center, cream/50 opacity, py-md (16px)
+- Copyright: Full-width at very bottom, text-sm, text-center, cream/50 opacity (Label slot at 50% opacity), py-md (16px)
 - SectionDivider component above this section
 
 ### WhatsApp Floating Button (CONT-05)
