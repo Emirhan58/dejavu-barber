@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import { AnimationProvider } from "@/components/providers/AnimationProvider";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import { Navbar } from "@/components/layout/Navbar";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -38,6 +39,7 @@ export default function RootLayout({
             <div className="grain-overlay">
               <Navbar />
               <main>{children}</main>
+              <WhatsAppButton />
             </div>
           </SmoothScrollProvider>
         </AnimationProvider>

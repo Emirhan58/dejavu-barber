@@ -1,20 +1,12 @@
 import { SectionDivider } from "@/components/layout/SectionDivider";
 import { RetroCard } from "@/components/ui/RetroCard";
-import { AnimationDemo } from "@/components/demo/AnimationDemo";
+import { Hero } from "@/components/sections/Hero";
 import { BUSINESS } from "@/lib/constants";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-base-dark flex min-h-screen flex-col items-center justify-center px-4">
-        <h1 className="font-display text-[40px] md:text-[64px] font-bold text-white neon-glow text-center">
-          DEJAVU
-        </h1>
-        <p className="mt-4 text-lg text-cream text-center">
-          Sac ve Sakal Tasarimi
-        </p>
-      </section>
+      <Hero />
 
       <SectionDivider />
 
@@ -85,11 +77,6 @@ export default function Home() {
       </section>
 
       <SectionDivider />
-
-      {/* Animation Demo */}
-      <section className="bg-base-medium py-(--spacing-section-mobile) md:py-(--spacing-section)">
-        <AnimationDemo />
-      </section>
 
       {/* Copyright */}
       <div className="bg-base-dark pb-8 pt-4">
