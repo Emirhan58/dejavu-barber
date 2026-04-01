@@ -5,6 +5,7 @@ status: draft
 shadcn_initialized: false
 preset: none
 created: 2026-04-01
+revised: 2026-04-01
 ---
 
 # Phase 01 — UI Design Contract
@@ -39,35 +40,38 @@ Declared values (all multiples of 4):
 | md | 16px | Default element spacing, card padding, navbar item gaps |
 | lg | 24px | Section inner padding (mobile), card content padding |
 | xl | 32px | Layout gaps between components |
-| 2xl | 48px | Section vertical padding (mobile: --spacing-section-mobile maps to 3rem) |
-| 3xl | 64px | Page-level spacing, hero content offset |
+| 2xl | 48px | Section vertical padding (mobile: --spacing-section-mobile maps to 3rem), mobile navbar height |
+| 3xl | 64px | Page-level spacing, desktop navbar height |
 | 4xl | 96px | Section vertical padding (desktop: --spacing-section maps to 6rem) |
 
 Exceptions:
-- Touch targets on mobile: minimum 44x44px hit area for all tappable elements (navbar links, menu items, WhatsApp CTA)
-- Navbar height: 64px (desktop), 56px (mobile)
-- Full-width sections: 0px horizontal padding on section wrappers; content constrained by max-width 1200px (--container-content) with 16px horizontal padding
+- Touch targets on mobile: minimum 44x44px hit area for all tappable elements (navbar links, menu items, WhatsApp CTA). 44px is not a spacing token but a minimum constraint on interactive element dimensions.
+- Full-width sections: 0px horizontal padding on section wrappers; content constrained by max-width 1200px (--container-content) with 16px horizontal padding.
 
-**Source:** Claude's discretion (CONTEXT.md delegated exact spacing scale)
+**Source:** Claude's discretion (CONTEXT.md delegated exact spacing scale). Revision note: mobile navbar height changed from 56px to 48px to align with the 2xl spacing token.
 
 ---
 
 ## Typography
 
+4 sizes declared, 2 weights declared.
+
 | Role | Size (desktop) | Size (mobile) | Weight | Line Height | Font | Extra |
 |------|---------------|---------------|--------|-------------|------|-------|
-| Display | 64px | 40px | 700 (bold) | 1.1 | Playfair Display | DEJAVU hero title, neon glow eligible |
+| Display | 64px | 40px | 700 (bold) | 1.1 | Playfair Display | Hero title, neon glow eligible |
 | Heading | 36px | 28px | 700 (bold) | 1.2 | Playfair Display | Section titles (Hakkimizda, Hizmetler, vb.) |
-| Subheading | 20px | 18px | 600 (semibold) | 1.3 | Inter | Card titles, subsection labels |
-| Body | 16px | 16px | 400 (regular) | 1.6 | Inter | Paragraphs, descriptions |
-| Label / CTA | 14px | 14px | 600 (semibold) | 1.4 | Inter | Navbar links, button text, uppercase letter-spacing: 0.1em |
-| Small | 12px | 12px | 400 (regular) | 1.5 | Inter | Copyright, metadata |
+| Body | 16px | 16px | 400 (regular) | 1.6 | Inter | Paragraphs, descriptions. Use bold (700) for card titles and subsection labels. |
+| Label | 14px | 14px | 700 (bold) | 1.4 | Inter | Navbar links, button text, copyright, metadata. CTA usage: uppercase + letter-spacing: 0.1em. |
 
-**Weights declared:** 400 (regular) and 700 (bold) for Playfair Display; 400 (regular) and 600 (semibold) for Inter.
+**Weights declared:** 400 (regular) + 700 (bold). Two weights only — applied across both font families.
+
+**Role merges (revision):**
+- Former "Subheading" (20px/600) merged into Body bold (16px/700). Card titles and subsection labels use Body at bold weight.
+- Former "Small" (12px/400) merged into Label (14px/700). Copyright and metadata text use Label size at regular weight (400) where lower visual emphasis is needed — the weight override is: `font-normal` class applied alongside Label size.
 
 **CTA/Accent rule:** All CTA text uses uppercase + letter-spacing: 0.1em (CONTEXT.md locked decision).
 
-**Source:** CONTEXT.md locked decisions (font families, uppercase CTA), Claude's discretion (exact sizes and weights)
+**Source:** CONTEXT.md locked decisions (font families, uppercase CTA), Claude's discretion (exact sizes and weights). Revision: reduced from 6 sizes to 4 and from 3 weights to 2 per checker feedback.
 
 ---
 
@@ -138,6 +142,24 @@ Neon glow is NOT applied to: service cards, footer/contact section, normal links
 
 ---
 
+## Accessibility Contract
+
+### aria-label Strategy
+
+All icon-only interactive elements MUST have an explicit `aria-label` attribute:
+
+| Element | aria-label | Notes |
+|---------|------------|-------|
+| Hamburger menu button (mobile) | `aria-label="Menu"` | Also set `aria-expanded="true/false"` reflecting menu open state |
+| WhatsApp floating button | `aria-label="WhatsApp ile randevu al"` | Turkish label describing the action, not just the icon |
+| Close button (mobile menu) | `aria-label="Menuyu kapat"` | Visible only when mobile menu is open |
+
+**Rule:** No interactive element may rely solely on an icon for its accessible name. Every `<button>` or `<a>` without visible text content must carry `aria-label`.
+
+**Source:** Revision — added per checker FLAG on Dimension 2 (Visuals/Accessibility).
+
+---
+
 ## Visual Motifs
 
 ### Grain Overlay
@@ -171,18 +193,18 @@ Neon glow is NOT applied to: service cards, footer/contact section, normal links
 | Property | Desktop | Mobile |
 |----------|---------|--------|
 | Position | Fixed, top: 0, full width | Fixed, top: 0, full width |
-| Height | 64px | 56px |
+| Height | 64px (3xl token) | 48px (2xl token) |
 | Initial state | Transparent background | Transparent background |
 | Scrolled state | base-dark bg + backdrop-blur-md + border-bottom gold 10% opacity | base-dark bg + backdrop-blur-md |
 | Transition | Motion-driven (Framer Motion), smooth opacity/bg | Motion-driven |
 | Logo | "DEJAVU" in Playfair Display, neon-glow class | Same, slightly smaller |
-| Items | Hakkimizda, Hizmetler, Galeri, Iletisim (cream text, 14px semibold uppercase) | Hidden — hamburger icon |
-| CTA | "RANDEVU AL" button — neon-red bg, white text, 14px semibold uppercase | Hidden in nav, visible in mobile menu |
+| Items | Hakkimizda, Hizmetler, Galeri, Iletisim (cream text, 14px bold uppercase) | Hidden — hamburger icon (aria-label="Menu", aria-expanded) |
+| CTA | "RANDEVU AL" button — neon-red bg, white text, 14px bold uppercase | Hidden in nav, visible in mobile menu |
 | Active indicator | 2px neon-red underline with glow below active item | Neon-red left border in mobile menu |
-| Mobile trigger | N/A | Hamburger icon, 44x44px touch target |
-| Mobile menu | N/A | Full-screen overlay, base-dark bg, centered links (20px semibold), Randevu Al at bottom, AnimatePresence enter/exit |
+| Mobile trigger | N/A | Hamburger icon, 44x44px touch target, aria-label="Menu" |
+| Mobile menu | N/A | Full-screen overlay, base-dark bg, centered links (16px bold — Body bold role), Randevu Al at bottom, AnimatePresence enter/exit |
 
-**Source:** CONTEXT.md locked decisions (all navbar behavior specified)
+**Source:** CONTEXT.md locked decisions (all navbar behavior specified). Revision: mobile navbar height 56px changed to 48px (2xl token). Mobile menu link size changed from 20px to 16px (Body bold) to stay within 4-size typography scale. Hamburger aria-label added per accessibility contract.
 
 ---
 
@@ -196,9 +218,9 @@ Neon glow is NOT applied to: service cards, footer/contact section, normal links
 | Section padding | 48px vertical (mobile), 96px vertical (desktop) |
 | Alternating backgrounds | Section 1: #1C1410, Section 2: #211812, Section 3: #150F0B, repeat |
 | Footer | Contact section doubles as footer — no separate footer component |
-| Copyright | Single line below contact section, 12px small text, centered |
+| Copyright | Single line below contact section, 14px Label size, centered |
 
-**Source:** CONTEXT.md locked decisions (full-width, max-width, alternating, footer approach)
+**Source:** CONTEXT.md locked decisions (full-width, max-width, alternating, footer approach). Revision: copyright size changed from 12px to 14px (Label role) to stay within 4-size typography scale.
 
 ---
 
