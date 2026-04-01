@@ -25,6 +25,8 @@ export function About() {
               src="/images/about/kuafor-icerisi.jpg"
               alt="Salon Dejavu ic mekan"
               fill
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAH/xAAbEAACAwADAAAAAAAAAAAAAAABAgADBBEhIv/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAWEQADAAAAAAAAAAAAAAAAAAAAASH/2gAMAwEAAhEDEQA/AJpoavKLq63ZXAJUn2QR3xERCcEVP//Z"
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
