@@ -61,11 +61,11 @@ Plans:
   3. Desktop user sees smoke/steam particle effects in the hero area; mobile user sees none of these heavy effects
   4. User hovering over buttons and headings sees neon glow effects
   5. Mobile user experiences only simple scroll-reveal animations with no parallax or particles, and the site stays smooth (no jank)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — DEJAVU neon intro animasyonu, duman/buhar parcacik efekti ve neon glow hover altyapisi
+- [ ] 03-02-PLAN.md — Scroll reveal animasyonlari, hero parallax, hizmet karti hover ve sayfa gecis animasyonlari
 
 ### Phase 4: SEO & Deploy
 **Goal**: The site is discoverable by locals searching "susehri berber" on Google, passes Lighthouse mobile 90+, and is live on Vercel
