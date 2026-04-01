@@ -17,12 +17,12 @@
 
 ### Content
 
-- [ ] **CONT-01**: Kullanici tam ekran hero bolumunde DEJAVU adini neon efektiyle gorur
+- [x] **CONT-01**: Kullanici tam ekran hero bolumunde DEJAVU adini neon efektiyle gorur
 - [ ] **CONT-02**: Kullanici Hakkimizda bolumunde dukkan hikayesini ve ekip bilgisini gorur
 - [ ] **CONT-03**: Kullanici hizmetler bolumunde kategorize edilmis hizmet kartlarini fiyatlariyla gorur (sac kesim, sakal, cilt bakimi, agda, buhar, boyama)
 - [ ] **CONT-04**: Kullanici iletisim bolumunde Google Maps embed, adres, telefon ve calisma saatlerini gorur
-- [ ] **CONT-05**: Kullanici her sayfada WhatsApp floating butonunu gorur ve tiklayinca WhatsApp mesaji acilir (905397256886)
-- [ ] **CONT-06**: Tum isletme verileri (adres, telefon, hizmetler, fiyatlar, saatler) tek bir constants dosyasindan gelir
+- [x] **CONT-05**: Kullanici her sayfada WhatsApp floating butonunu gorur ve tiklayinca WhatsApp mesaji acilir (905397256886)
+- [x] **CONT-06**: Tum isletme verileri (adres, telefon, hizmetler, fiyatlar, saatler) tek bir constants dosyasindan gelir
 
 ### Gallery
 
@@ -87,12 +87,12 @@
 | FOUND-05 | Phase 1 | Complete |
 | FOUND-06 | Phase 1 | Complete |
 | FOUND-07 | Phase 1 | Complete |
-| CONT-01 | Phase 2 | Pending |
+| CONT-01 | Phase 2 | Complete |
 | CONT-02 | Phase 2 | Pending |
 | CONT-03 | Phase 2 | Pending |
 | CONT-04 | Phase 2 | Pending |
-| CONT-05 | Phase 2 | Pending |
-| CONT-06 | Phase 2 | Pending |
+| CONT-05 | Phase 2 | Complete |
+| CONT-06 | Phase 2 | Complete |
 | GALR-01 | Phase 2 | Pending |
 | GALR-02 | Phase 2 | Pending |
 | GALR-03 | Phase 2 | Pending |
