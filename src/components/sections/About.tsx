@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 export function About() {
   return (
@@ -6,7 +9,7 @@ export function About() {
       id="hakkimizda"
       className="bg-base-medium py-(--spacing-section-mobile) md:py-(--spacing-section)"
     >
-      <div className="mx-auto max-w-(--container-content) px-4 md:px-6">
+      <ScrollReveal className="mx-auto max-w-(--container-content) px-4 md:px-6">
         <h2 className="font-display text-2xl font-bold text-cream mb-6">
           Hakkimizda
         </h2>
@@ -32,7 +35,7 @@ export function About() {
             />
           </div>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

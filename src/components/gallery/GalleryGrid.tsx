@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { GALLERY_IMAGES, GALLERY_FILTERS } from "@/lib/constants";
 import { Lightbox } from "./Lightbox";
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 export function GalleryGrid() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -39,26 +40,28 @@ export function GalleryGrid() {
           Henuz fotograf eklenmedi.
         </p>
       ) : (
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
-          {filteredImages.map((image, index) => (
-            <div
-              key={image.src}
-              className="mb-4 break-inside-avoid overflow-hidden rounded-lg cursor-pointer"
-              onClick={() => setLightboxIndex(index)}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                placeholder="blur"
-                blurDataURL={image.blurDataURL}
-                className="w-full h-auto object-cover hover:opacity-90 transition-opacity"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-            </div>
-          ))}
-        </div>
+        <ScrollReveal stagger={true}>
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+            {filteredImages.map((image, index) => (
+              <div
+                key={image.src}
+                className="scroll-reveal-item mb-4 break-inside-avoid overflow-hidden rounded-lg cursor-pointer"
+                onClick={() => setLightboxIndex(index)}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  placeholder="blur"
+                  blurDataURL={image.blurDataURL}
+                  className="w-full h-auto object-cover hover:opacity-90 transition-opacity"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
       )}
 
       {/* Lightbox */}

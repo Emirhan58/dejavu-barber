@@ -1,4 +1,7 @@
+"use client";
+
 import { BUSINESS, WHATSAPP_MESSAGE } from "@/lib/constants";
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 export function Contact() {
   return (
@@ -6,7 +9,7 @@ export function Contact() {
       id="iletisim"
       className="bg-base-light py-(--spacing-section-mobile) md:py-(--spacing-section)"
     >
-      <div className="mx-auto max-w-(--container-content) px-4 md:px-6">
+      <ScrollReveal className="mx-auto max-w-(--container-content) px-4 md:px-6">
         <h2 className="font-display text-2xl font-bold text-cream mb-8">
           Iletisim
         </h2>
@@ -14,7 +17,7 @@ export function Contact() {
           {/* Google Maps */}
           <div className="overflow-hidden rounded-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d37.9835!3d40.1588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCami+Orta+Mahallesi%2C+Sivas+Cd.+No%3A55%2FC%2C+58600+S%C3%BC%C5%9Fehri%2FSivas!5e0!3m2!1str!2str"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200!2d38.0901846!3d40.1626277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407b6f711b8d6531%3A0xe466fdd694aed2ac!2sDejavu%20Kuaf%C3%B6r%20Salonu!5e0!3m2!1str!2str!4v1"
               width="100%"
               height="400"
               style={{ border: 0 }}
@@ -120,7 +123,7 @@ export function Contact() {
             {BUSINESS.copyright}
           </p>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }
