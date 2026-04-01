@@ -12,8 +12,8 @@
 - [x] **FOUND-03**: GSAP + Motion (Framer Motion) animasyon altyapisi kurulur, sorumluluk alanlari net ayrilir
 - [x] **FOUND-04**: Vintage Turk berber tasarim sistemi olusturulur (koyu tonlar, kirmizi/neon vurgular, altin/kremsi aksan, sicak kahverengi)
 - [x] **FOUND-05**: 3 katmanli animasyon degradasyonu: full (desktop), reduced (mobil), none (prefers-reduced-motion)
-- [ ] **FOUND-06**: Lenis smooth scroll entegrasyonu
-- [ ] **FOUND-07**: Sticky navbar ile bolum navigasyonu ve scroll-spy
+- [x] **FOUND-06**: Lenis smooth scroll entegrasyonu
+- [x] **FOUND-07**: Sticky navbar ile bolum navigasyonu ve scroll-spy
 
 ### Content
 
@@ -85,8 +85,8 @@
 | FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Complete |
 | FOUND-05 | Phase 1 | Complete |
-| FOUND-06 | Phase 1 | Pending |
-| FOUND-07 | Phase 1 | Pending |
+| FOUND-06 | Phase 1 | Complete |
+| FOUND-07 | Phase 1 | Complete |
 | CONT-01 | Phase 2 | Pending |
 | CONT-02 | Phase 2 | Pending |
 | CONT-03 | Phase 2 | Pending |
