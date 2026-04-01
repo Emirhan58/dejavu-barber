@@ -33,8 +33,8 @@
 ### Animations
 
 - [x] **ANIM-01**: Kullanici ilk ziyarette DEJAVU neon intro animasyonu gorur (skippable, sessionStorage ile tekrar gosterilmez)
-- [ ] **ANIM-02**: Kullanici scroll ederken bolumlerin fade-in/slide-up ile ortaya ciktigini gorur
-- [ ] **ANIM-03**: Kullanici parallax arka plan katmanlarinin farkli hizlarda hareket ettigini gorur
+- [x] **ANIM-02**: Kullanici scroll ederken bolumlerin fade-in/slide-up ile ortaya ciktigini gorur
+- [x] **ANIM-03**: Kullanici parallax arka plan katmanlarinin farkli hizlarda hareket ettigini gorur
 - [x] **ANIM-04**: Kullanici desktop'ta duman/buhar parcacik efektlerini gorur (mobilde devre disi)
 - [x] **ANIM-05**: Mobil kullanici sadece basit scroll reveal animasyonlarini gorur (parallax/parcacik yok)
 - [x] **ANIM-06**: Neon glow hover efektleri butonlar ve basliklar uzerinde calisir
@@ -97,8 +97,8 @@
 | GALR-02 | Phase 2 | Complete |
 | GALR-03 | Phase 2 | Complete |
 | ANIM-01 | Phase 3 | Complete |
-| ANIM-02 | Phase 3 | Pending |
-| ANIM-03 | Phase 3 | Pending |
+| ANIM-02 | Phase 3 | Complete |
+| ANIM-03 | Phase 3 | Complete |
 | ANIM-04 | Phase 3 | Complete |
 | ANIM-05 | Phase 3 | Complete |
 | ANIM-06 | Phase 3 | Complete |

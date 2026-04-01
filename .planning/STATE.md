@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 03-01-PLAN.md
-last_updated: "2026-04-01T18:15:01.470Z"
+stopped_at: Completed 03-02-PLAN.md
+last_updated: "2026-04-01T18:16:35.257Z"
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 10
-  completed_plans: 9
+  completed_plans: 10
 ---
 
 # Project State
@@ -23,7 +23,7 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 
 ## Current Position
 
-Phase: 03 (animation-layer) — EXECUTING
+Phase: 03 (animation-layer) — COMPLETE
 Plan: 2 of 2
 
 ## Performance Metrics
@@ -51,6 +51,7 @@ Plan: 2 of 2
 | Phase 02 P04 | 1min | 1 tasks | 1 files |
 | Phase 02 P05 | 1min | 1 tasks | 4 files |
 | Phase 03 P01 | 2min | 2 tasks | 6 files |
+| Phase 03 P02 | 4min | 2 tasks | 10 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,10 @@ Recent decisions affecting current work:
 - [Phase 03-01]: Intro plays on both full and reduced tiers, only none (prefers-reduced-motion) skips
 - [Phase 03-01]: SmokeParticles uses deterministic i-based math to avoid hydration mismatches
 - [Phase 03-01]: Logo SVG hover uses filter drop-shadow (neon-hover-glow-svg) since text-shadow does not work on SVG
+- [Phase 03]: About, Services, Contact converted to client components for ScrollReveal
+- [Phase 03]: HeroParallax null-render pattern: client component returns null, applies GSAP via class selectors
+- [Phase 03]: ServiceCard hover: translateY -3px + shadow only, no neon glow
+- [Phase 03]: FrozenRouter with LayoutRouterContext for AnimatePresence exit animations in Next.js 16
 
 ### Pending Todos
 
@@ -93,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T18:15:01.468Z
-Stopped at: Completed 03-01-PLAN.md
+Last session: 2026-04-01T18:16:35.255Z
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
