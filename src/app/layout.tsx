@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import { AnimationProvider } from "@/components/providers/AnimationProvider";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
+import { Navbar } from "@/components/layout/Navbar";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -34,7 +35,10 @@ export default function RootLayout({
       <body className="font-body bg-base-dark text-cream min-h-screen">
         <AnimationProvider>
           <SmoothScrollProvider>
-            <div className="grain-overlay">{children}</div>
+            <div className="grain-overlay">
+              <Navbar />
+              <main>{children}</main>
+            </div>
           </SmoothScrollProvider>
         </AnimationProvider>
       </body>

@@ -5,7 +5,7 @@ import { BUSINESS } from "@/lib/constants";
 
 export default function Home() {
   return (
-    <main>
+    <>
       {/* Hero Section */}
       <section className="bg-base-dark flex min-h-screen flex-col items-center justify-center px-4">
         <h1 className="font-display text-[40px] md:text-[64px] font-bold text-white neon-glow text-center">
@@ -19,7 +19,7 @@ export default function Home() {
       <SectionDivider />
 
       {/* Hakkimizda Section */}
-      <section className="bg-base-medium py-(--spacing-section-mobile) md:py-(--spacing-section)">
+      <section id="hakkimizda" className="bg-base-medium min-h-[70vh] py-(--spacing-section-mobile) md:py-(--spacing-section)">
         <div className="mx-auto max-w-(--container-content) px-4 md:px-6">
           <h2 className="font-display text-[28px] md:text-[36px] font-bold text-cream mb-6">
             Hakkimizda
@@ -35,7 +35,7 @@ export default function Home() {
       <SectionDivider />
 
       {/* Hizmetler Section */}
-      <section className="bg-base-light py-(--spacing-section-mobile) md:py-(--spacing-section)">
+      <section id="hizmetler" className="bg-base-light min-h-[70vh] py-(--spacing-section-mobile) md:py-(--spacing-section)">
         <div className="mx-auto max-w-(--container-content) px-4 md:px-6">
           <h2 className="font-display text-[28px] md:text-[36px] font-bold text-cream mb-8">
             Hizmetler
@@ -66,7 +66,7 @@ export default function Home() {
       <SectionDivider />
 
       {/* Iletisim Section */}
-      <section className="bg-base-dark py-(--spacing-section-mobile) md:py-(--spacing-section)">
+      <section id="iletisim" className="bg-base-dark min-h-[70vh] py-(--spacing-section-mobile) md:py-(--spacing-section)">
         <div className="mx-auto max-w-(--container-content) px-4 md:px-6">
           <h2 className="font-display text-[28px] md:text-[36px] font-bold text-cream mb-6">
             Iletisim
@@ -97,6 +97,6 @@ export default function Home() {
           {BUSINESS.copyright}
         </p>
       </div>
-    </main>
+    </>
   );
 }
