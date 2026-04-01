@@ -1,5 +1,6 @@
 import { SectionDivider } from "@/components/layout/SectionDivider";
 import { RetroCard } from "@/components/ui/RetroCard";
+import { AnimationDemo } from "@/components/demo/AnimationDemo";
 import { BUSINESS } from "@/lib/constants";
 
 export default function Home() {
@@ -81,6 +82,13 @@ export default function Home() {
             </p>
           </RetroCard>
         </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* Animation Demo */}
+      <section className="bg-base-medium py-(--spacing-section-mobile) md:py-(--spacing-section)">
+        <AnimationDemo />
       </section>
 
       {/* Copyright */}
