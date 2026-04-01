@@ -9,9 +9,9 @@
 
 - [x] **FOUND-01**: Site Next.js 15 App Router + TypeScript ile calisir
 - [x] **FOUND-02**: Tailwind CSS 4 ile responsive, mobile-first tasarim uygulanir
-- [ ] **FOUND-03**: GSAP + Motion (Framer Motion) animasyon altyapisi kurulur, sorumluluk alanlari net ayrilir
+- [x] **FOUND-03**: GSAP + Motion (Framer Motion) animasyon altyapisi kurulur, sorumluluk alanlari net ayrilir
 - [x] **FOUND-04**: Vintage Turk berber tasarim sistemi olusturulur (koyu tonlar, kirmizi/neon vurgular, altin/kremsi aksan, sicak kahverengi)
-- [ ] **FOUND-05**: 3 katmanli animasyon degradasyonu: full (desktop), reduced (mobil), none (prefers-reduced-motion)
+- [x] **FOUND-05**: 3 katmanli animasyon degradasyonu: full (desktop), reduced (mobil), none (prefers-reduced-motion)
 - [ ] **FOUND-06**: Lenis smooth scroll entegrasyonu
 - [ ] **FOUND-07**: Sticky navbar ile bolum navigasyonu ve scroll-spy
 
@@ -82,9 +82,9 @@
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Complete |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Complete |
-| FOUND-05 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Complete |
 | FOUND-06 | Phase 1 | Pending |
 | FOUND-07 | Phase 1 | Pending |
 | CONT-01 | Phase 2 | Pending |
