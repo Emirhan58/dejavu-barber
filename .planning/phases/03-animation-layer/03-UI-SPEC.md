@@ -37,9 +37,15 @@ Inherited from Phase 1 globals.css `@theme` tokens. No new spacing tokens needed
 | lg | 24px | Section padding |
 | xl | 32px | Layout gaps |
 | 2xl | 48px | Major section breaks (--spacing-section-mobile: 3rem) |
-| 3xl | 96px | Page-level section spacing (--spacing-section: 6rem) |
+| 3xl | 64px | Page-level spacing |
 
-Exceptions: Intro overlay uses `inset-0` (full viewport). Smoke particle positioning uses percentage-based values (not grid tokens).
+### Spacing Scale Exceptions
+
+| Value | Justification |
+|-------|---------------|
+| 96px | `--spacing-section` token inherited from Phase 1 globals.css (`6rem`); page-level section spacing only, not used in component layouts. |
+
+Intro overlay uses `inset-0` (full viewport). Smoke particle positioning uses percentage-based values (not grid tokens).
 
 ---
 
@@ -54,12 +60,14 @@ Inherited from Phase 1. No new type scales for this phase.
 | Heading | 20px (text-xl) | 700 (Playfair) | 1.2 |
 | Display | 28px mobile / 48px desktop | 700 (Playfair) | 1.1 |
 
-### Phase-Specific Typography: Intro Overlay
+### Animation Token: Intro Display
+
+The DEJAVU intro letter size is an animation implementation detail, not a typographic hierarchy level. It lives outside the 4-level type scale.
 
 | Element | Size | Weight | Font | Notes |
 |---------|------|--------|------|-------|
-| DEJAVU intro letters | 64px mobile / 96px desktop | 700 | Playfair Display | Each letter wrapped in span, neon glow text-shadow applied per-letter |
-| Intro slogan "Sac ve Sakal Tasarimi" | 16px mobile / 20px desktop | 400 | Inter | Fades in below DEJAVU letters, tracking-wide |
+| DEJAVU intro letters | 64px mobile / 96px desktop | 700 | Playfair Display | Each letter wrapped in span, neon glow text-shadow applied per-letter. Treated as animation token `--intro-display-size`, not part of the typography scale. |
+| Intro slogan "Sac ve Sakal Tasarimi" | 16px mobile / 20px desktop | 400 | Inter | Fades in below DEJAVU letters, tracking-wide. Uses existing Body/Heading type scale sizes. |
 
 ---
 
