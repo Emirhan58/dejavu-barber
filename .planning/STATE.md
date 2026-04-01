@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Phase 3 context gathered
-last_updated: "2026-04-01T17:32:20.084Z"
+stopped_at: Completed 03-01-PLAN.md
+last_updated: "2026-04-01T18:15:01.470Z"
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 8
-  completed_plans: 8
+  total_plans: 10
+  completed_plans: 9
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-04-01)
 
 **Core value:** Dejavu'nun fiziksel dukkan atmosferini dijitale tasiyan, musterileri ilk saniyede etkileyen ve WhatsApp'a yonlendiren profesyonel bir berber sitesi
-**Current focus:** Phase 02 — content-sections-gallery
+**Current focus:** Phase 03 — animation-layer
 
 ## Current Position
 
-Phase: 02 (content-sections-gallery) — EXECUTING
-Plan: 5 of 5
+Phase: 03 (animation-layer) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Plan: 5 of 5
 | Phase 02 P02 | 2min | 2 tasks | 5 files |
 | Phase 02 P04 | 1min | 1 tasks | 1 files |
 | Phase 02 P05 | 1min | 1 tasks | 4 files |
+| Phase 03 P01 | 2min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -76,6 +77,9 @@ Recent decisions affecting current work:
 - [Phase 02]: SVG icons inline via getServiceIcon mapper -- no external icon library
 - [Phase 02]: Contact copyright inside Contact component, not standalone in page.tsx
 - [Phase 02]: Used sharp to generate real per-image blur base64 instead of generic placeholder
+- [Phase 03-01]: Intro plays on both full and reduced tiers, only none (prefers-reduced-motion) skips
+- [Phase 03-01]: SmokeParticles uses deterministic i-based math to avoid hydration mismatches
+- [Phase 03-01]: Logo SVG hover uses filter drop-shadow (neon-hover-glow-svg) since text-shadow does not work on SVG
 
 ### Pending Todos
 
@@ -89,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T17:32:20.082Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-animation-layer/03-CONTEXT.md
+Last session: 2026-04-01T18:15:01.468Z
+Stopped at: Completed 03-01-PLAN.md
+Resume file: None

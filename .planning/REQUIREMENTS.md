@@ -32,12 +32,12 @@
 
 ### Animations
 
-- [ ] **ANIM-01**: Kullanici ilk ziyarette DEJAVU neon intro animasyonu gorur (skippable, sessionStorage ile tekrar gosterilmez)
+- [x] **ANIM-01**: Kullanici ilk ziyarette DEJAVU neon intro animasyonu gorur (skippable, sessionStorage ile tekrar gosterilmez)
 - [ ] **ANIM-02**: Kullanici scroll ederken bolumlerin fade-in/slide-up ile ortaya ciktigini gorur
 - [ ] **ANIM-03**: Kullanici parallax arka plan katmanlarinin farkli hizlarda hareket ettigini gorur
-- [ ] **ANIM-04**: Kullanici desktop'ta duman/buhar parcacik efektlerini gorur (mobilde devre disi)
-- [ ] **ANIM-05**: Mobil kullanici sadece basit scroll reveal animasyonlarini gorur (parallax/parcacik yok)
-- [ ] **ANIM-06**: Neon glow hover efektleri butonlar ve basliklar uzerinde calisir
+- [x] **ANIM-04**: Kullanici desktop'ta duman/buhar parcacik efektlerini gorur (mobilde devre disi)
+- [x] **ANIM-05**: Mobil kullanici sadece basit scroll reveal animasyonlarini gorur (parallax/parcacik yok)
+- [x] **ANIM-06**: Neon glow hover efektleri butonlar ve basliklar uzerinde calisir
 
 ### Visual
 
@@ -96,12 +96,12 @@
 | GALR-01 | Phase 2 | Complete |
 | GALR-02 | Phase 2 | Complete |
 | GALR-03 | Phase 2 | Complete |
-| ANIM-01 | Phase 3 | Pending |
+| ANIM-01 | Phase 3 | Complete |
 | ANIM-02 | Phase 3 | Pending |
 | ANIM-03 | Phase 3 | Pending |
-| ANIM-04 | Phase 3 | Pending |
-| ANIM-05 | Phase 3 | Pending |
-| ANIM-06 | Phase 3 | Pending |
+| ANIM-04 | Phase 3 | Complete |
+| ANIM-05 | Phase 3 | Complete |
+| ANIM-06 | Phase 3 | Complete |
 | VISL-01 | Phase 1 | Complete |
 | VISL-02 | Phase 1 | Complete |
 | VISL-03 | Phase 1 | Complete |
