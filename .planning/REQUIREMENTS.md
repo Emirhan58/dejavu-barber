@@ -7,10 +7,10 @@
 
 ### Foundation
 
-- [ ] **FOUND-01**: Site Next.js 15 App Router + TypeScript ile calisir
-- [ ] **FOUND-02**: Tailwind CSS 4 ile responsive, mobile-first tasarim uygulanir
+- [x] **FOUND-01**: Site Next.js 15 App Router + TypeScript ile calisir
+- [x] **FOUND-02**: Tailwind CSS 4 ile responsive, mobile-first tasarim uygulanir
 - [ ] **FOUND-03**: GSAP + Motion (Framer Motion) animasyon altyapisi kurulur, sorumluluk alanlari net ayrilir
-- [ ] **FOUND-04**: Vintage Turk berber tasarim sistemi olusturulur (koyu tonlar, kirmizi/neon vurgular, altin/kremsi aksan, sicak kahverengi)
+- [x] **FOUND-04**: Vintage Turk berber tasarim sistemi olusturulur (koyu tonlar, kirmizi/neon vurgular, altin/kremsi aksan, sicak kahverengi)
 - [ ] **FOUND-05**: 3 katmanli animasyon degradasyonu: full (desktop), reduced (mobil), none (prefers-reduced-motion)
 - [ ] **FOUND-06**: Lenis smooth scroll entegrasyonu
 - [ ] **FOUND-07**: Sticky navbar ile bolum navigasyonu ve scroll-spy
@@ -41,9 +41,9 @@
 
 ### Visual
 
-- [ ] **VISL-01**: Site vintage Turk berber estetigi tasir — neon tabela hissi, retro cerceveler, berber diregi motifleri
-- [ ] **VISL-02**: Renk paleti dukkanin gercek atmosferini yansitir: koyu siyah/antrasit base, kirmizi/neon vurgular, altin/kremsi aksan
-- [ ] **VISL-03**: Arka plan dokularinda vintage his vardir (grain, texture overlay)
+- [x] **VISL-01**: Site vintage Turk berber estetigi tasir — neon tabela hissi, retro cerceveler, berber diregi motifleri
+- [x] **VISL-02**: Renk paleti dukkanin gercek atmosferini yansitir: koyu siyah/antrasit base, kirmizi/neon vurgular, altin/kremsi aksan
+- [x] **VISL-03**: Arka plan dokularinda vintage his vardir (grain, texture overlay)
 
 ### SEO & Deploy
 
@@ -80,10 +80,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
-| FOUND-02 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
+| FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 1 | Pending |
-| FOUND-04 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Complete |
 | FOUND-05 | Phase 1 | Pending |
 | FOUND-06 | Phase 1 | Pending |
 | FOUND-07 | Phase 1 | Pending |
@@ -102,9 +102,9 @@
 | ANIM-04 | Phase 3 | Pending |
 | ANIM-05 | Phase 3 | Pending |
 | ANIM-06 | Phase 3 | Pending |
-| VISL-01 | Phase 1 | Pending |
-| VISL-02 | Phase 1 | Pending |
-| VISL-03 | Phase 1 | Pending |
+| VISL-01 | Phase 1 | Complete |
+| VISL-02 | Phase 1 | Complete |
+| VISL-03 | Phase 1 | Complete |
 | SEOD-01 | Phase 4 | Pending |
 | SEOD-02 | Phase 4 | Pending |
 | SEOD-03 | Phase 4 | Pending |
