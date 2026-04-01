@@ -21,15 +21,21 @@ Dejavu'nun fiziksel dukkan atmosferini dijitale tasiyan, musterileri ilk saniyed
 
 ### Active
 
-- [ ] Next.js 15 (App Router) + TypeScript + Tailwind CSS 4
-- [ ] Framer Motion + GSAP animasyon sistemi (portfolio kalitesinde tam gaz animasyonlar)
-- [ ] Vintage/klasik Turk berber estegi — sicak, samimi, neon tabela havasi
-- [ ] Sadece Turkce — tek dil
-- [ ] Scroll animasyonlari, parallax, parcacik efektleri, intro animasyon
-- [ ] Mobilde azaltilmis animasyonlar (performans korunur)
-- [ ] Responsive / mobile-first yaklasim
 - [ ] SEO meta tags
 - [ ] Vercel deploy
+
+### Validated (Phase 3)
+
+- [x] Framer Motion + GSAP animasyon sistemi (Validated in Phase 3)
+- [x] Scroll animasyonlari, parallax, parcacik efektleri, intro animasyon (Validated in Phase 3)
+- [x] Mobilde azaltilmis animasyonlar — tier-based gating (Validated in Phase 3)
+
+### Validated (Phase 1-2)
+
+- [x] Next.js 15 (App Router) + TypeScript + Tailwind CSS 4 (Validated in Phase 1)
+- [x] Vintage/klasik Turk berber estegi — sicak, samimi, neon tabela havasi (Validated in Phase 1)
+- [x] Sadece Turkce — tek dil (Validated in Phase 2)
+- [x] Responsive / mobile-first yaklasim (Validated in Phase 1)
 
 ### Out of Scope
 
@@ -91,4 +97,4 @@ Dejavu'nun fiziksel dukkan atmosferini dijitale tasiyan, musterileri ilk saniyed
 | Vintage Turk berber temas | Dukkanin gercek atmosferini dijitale tasiyor, samimi ve otantik | — Pending |
 
 ---
-*Last updated: 2026-04-01 after Phase 2 completion*
+*Last updated: 2026-04-01 after Phase 3 completion*
