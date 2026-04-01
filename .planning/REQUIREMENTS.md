@@ -26,9 +26,9 @@
 
 ### Gallery
 
-- [ ] **GALR-01**: Kullanici ayri /galeri sayfasinda dukkan fotograflarini grid/masonry layoutta gorur
-- [ ] **GALR-02**: Fotograflar Next.js Image ile optimize edilir (WebP, lazy loading, blur placeholder)
-- [ ] **GALR-03**: Ana sayfa ile galeri arasinda smooth sayfa gecis animasyonu vardir
+- [x] **GALR-01**: Kullanici ayri /galeri sayfasinda dukkan fotograflarini grid/masonry layoutta gorur
+- [x] **GALR-02**: Fotograflar Next.js Image ile optimize edilir (WebP, lazy loading, blur placeholder)
+- [x] **GALR-03**: Ana sayfa ile galeri arasinda smooth sayfa gecis animasyonu vardir
 
 ### Animations
 
@@ -93,9 +93,9 @@
 | CONT-04 | Phase 2 | Pending |
 | CONT-05 | Phase 2 | Complete |
 | CONT-06 | Phase 2 | Complete |
-| GALR-01 | Phase 2 | Pending |
-| GALR-02 | Phase 2 | Pending |
-| GALR-03 | Phase 2 | Pending |
+| GALR-01 | Phase 2 | Complete |
+| GALR-02 | Phase 2 | Complete |
+| GALR-03 | Phase 2 | Complete |
 | ANIM-01 | Phase 3 | Pending |
 | ANIM-02 | Phase 3 | Pending |
 | ANIM-03 | Phase 3 | Pending |
