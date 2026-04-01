@@ -90,3 +90,55 @@
 .animate-barber-slide {
   animation: barber-slide 3s linear infinite;
 }
+
+/* CTA Pulse Glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(225, 29, 72, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(225, 29, 72, 0.8), 0 0 40px rgba(225, 29, 72, 0.3); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Smoke/Steam Particles */
+@keyframes smoke-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate3d(20px, -120px, 0) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.smoke-particle {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  animation: smoke-rise 6s ease-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Neon Hover Glow - for text elements */
+.neon-hover-glow {
+  transition: text-shadow 0.25s ease;
+}
+.neon-hover-glow:hover {
+  text-shadow:
+    0 0 7px #E11D48,
+    0 0 10px #E11D48,
+    0 0 21px #E11D48;
+}
+
+/* Neon Hover Glow - for SVG elements (text-shadow doesn't work on SVG, use filter instead) */
+.neon-hover-glow-svg {
+  transition: filter 0.25s ease;
+}
+.neon-hover-glow-svg:hover {
+  filter: drop-shadow(0 0 7px #E11D48) drop-shadow(0 0 10px #E11D48);
+}
