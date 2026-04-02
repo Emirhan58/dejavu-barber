@@ -47,8 +47,8 @@
 
 ### SEO & Deploy
 
-- [ ] **SEOD-01**: JSON-LD LocalBusiness/BarberShop structured data tum isletme bilgileriyle eklenir
-- [ ] **SEOD-02**: Turkce meta tags, Open Graph tags ve og:image dukkan fotografiyla eklenir
+- [x] **SEOD-01**: JSON-LD LocalBusiness/BarberShop structured data tum isletme bilgileriyle eklenir
+- [x] **SEOD-02**: Turkce meta tags, Open Graph tags ve og:image dukkan fotografiyla eklenir
 - [ ] **SEOD-03**: Site Vercel'e deploy edilir ve canli URL'den erisilebilir
 - [ ] **SEOD-04**: Lighthouse mobil skoru 90+ hedeflenir
 
@@ -105,8 +105,8 @@
 | VISL-01 | Phase 1 | Complete |
 | VISL-02 | Phase 1 | Complete |
 | VISL-03 | Phase 1 | Complete |
-| SEOD-01 | Phase 4 | Pending |
-| SEOD-02 | Phase 4 | Pending |
+| SEOD-01 | Phase 4 | Complete |
+| SEOD-02 | Phase 4 | Complete |
 | SEOD-03 | Phase 4 | Pending |
 | SEOD-04 | Phase 4 | Pending |
 

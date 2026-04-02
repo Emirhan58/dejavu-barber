@@ -92,4 +92,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation & Design System | 2/3 | In Progress|  |
 | 2. Content Sections & Gallery | 3/3 | Complete   | 2026-04-01 |
 | 3. Animation Layer | 2/2 | Complete   | 2026-04-01 |
-| 4. SEO & Deploy | 0/2 | Not started | - |
+| 4. SEO & Deploy | 1/2 | In Progress|  |
