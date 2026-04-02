@@ -24,36 +24,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dejavu-barber.vercel.app"),
+  metadataBase: new URL("https://salondejavu.vercel.app"),
+  verification: {
+    google: "I5eaoY-wfYI0-D0QzCG4zXBIXLDlTYubLXe3XzJBaNo",
+  },
   title: {
-    default: "Salon Dejavu \u2014 Susehri Berber | Sac ve Sakal Tasarimi",
+    default: "Salon Dejavu — Suşehri Berber | Saç ve Sakal Tasarımı",
     template: "%s | Salon Dejavu",
   },
   description:
-    "Susehri'nin en iyi erkek kuaforu. Profesyonel sac kesimi, sakal trasi, cilt bakimi. Salon Dejavu \u2014 Sivas Cd. No:55/C, Susehri/Sivas. Randevu icin: 0539 725 68 86",
+    "Suşehri'nin en iyi erkek kuaförü. Profesyonel saç kesimi, sakal tıraşı, cilt bakımı. Salon Dejavu — Sivas Cd. No:55/C, Suşehri/Sivas. Randevu için: 0539 725 68 86",
   keywords: [
+    "suşehri berber",
+    "Suşehri berber",
     "susehri berber",
-    "Susehri berber",
-    "Su\u015Fehri berber",
+    "suşehri erkek kuaförü",
+    "Suşehri erkek kuaförü",
     "susehri erkek kuaforu",
-    "Su\u015Fehri erkek kuaf\u00F6r\u00FC",
     "sivas berber",
     "Sivas berber",
     "salon dejavu",
     "Salon Dejavu",
+    "saç kesimi suşehri",
+    "erkek kuaförü sivas",
   ],
   authors: [{ name: "Salon Dejavu" }],
   openGraph: {
-    title: "Salon Dejavu \u2014 Susehri Berber",
+    title: "Salon Dejavu — Suşehri Berber",
     description:
-      "Susehri'nin en iyi erkek kuaforu. Profesyonel sac ve sakal tasarimi.",
-    url: "https://dejavu-barber.vercel.app",
+      "Suşehri'nin en iyi erkek kuaförü. Profesyonel saç ve sakal tasarımı.",
+    url: "https://salondejavu.vercel.app",
     siteName: "Salon Dejavu",
     locale: "tr_TR",
     type: "website",
   },
   alternates: {
-    canonical: "https://dejavu-barber.vercel.app",
+    canonical: "https://salondejavu.vercel.app",
   },
   robots: {
     index: true,
@@ -66,7 +72,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = generateBusinessJsonLd("https://dejavu-barber.vercel.app");
+  const jsonLd = generateBusinessJsonLd("https://salondejavu.vercel.app");
 
   return (
     <html lang="tr" className={`${playfair.variable} ${inter.variable}`}>

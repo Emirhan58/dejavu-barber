@@ -74,7 +74,7 @@ export function IntroOverlay() {
         <Logo height={160} className="hidden md:block" />
       </div>
       <p className="intro-slogan text-cream/80 text-base md:text-xl tracking-[0.2em] mt-4 font-body" style={{ opacity: 0 }}>
-        Sac ve Sakal Tasarimi
+        Saç ve Sakal Tasarımı
       </p>
     </div>
   );

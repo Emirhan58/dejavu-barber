@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { NAV_ITEMS, CTA_TEXT, BUSINESS } from "@/lib/constants";
+import { NAV_ITEMS, CTA_TEXT, BUSINESS, WHATSAPP_MESSAGE } from "@/lib/constants";
 import { Logo } from "@/components/ui/Logo";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { MobileMenu } from "./MobileMenu";
@@ -104,7 +104,7 @@ export function Navbar() {
 
           {/* CTA */}
           <a
-            href={BUSINESS.whatsappUrl}
+            href={`${BUSINESS.whatsappUrl}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gold text-base-dark text-sm font-bold uppercase tracking-wider px-4 py-2 rounded hover:brightness-110 transition-all"

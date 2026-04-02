@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://dejavu-barber.vercel.app/sitemap.xml",
+    sitemap: "https://salondejavu.vercel.app/sitemap.xml",
   };
 }

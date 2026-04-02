@@ -1,4 +1,4 @@
-import { IntroOverlayLazy } from "@/components/animations/IntroOverlayLazy";
+import { IntroOverlay } from "@/components/animations/IntroOverlay";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
@@ -8,7 +8,7 @@ import { SectionDivider } from "@/components/layout/SectionDivider";
 export default function Home() {
   return (
     <>
-      <IntroOverlayLazy />
+      <IntroOverlay />
       <Hero />
       <SectionDivider />
       <About />

@@ -5,15 +5,15 @@ export function generateBusinessJsonLd(siteUrl: string) {
     "@context": "https://schema.org",
     "@type": "HairSalon",
     name: BUSINESS.name,
-    alternateName: "Dejavu Erkek Kuaforu",
+    alternateName: "Dejavu Erkek Kuaförü",
     description:
-      "Susehri/Sivas'taki Salon Dejavu Erkek Kuaforu. Profesyonel sac ve sakal tasarimi hizmetleri.",
+      "Suşehri/Sivas'taki Salon Dejavu Erkek Kuaförü. Profesyonel saç ve sakal tasarımı hizmetleri.",
     url: siteUrl,
     telephone: `+90${BUSINESS.phone}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Cami Orta Mahallesi, Sivas Cd. No:55/C",
-      addressLocality: "Susehri",
+      addressLocality: "Suşehri",
       addressRegion: "Sivas",
       postalCode: "58600",
       addressCountry: "TR",

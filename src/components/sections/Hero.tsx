@@ -18,10 +18,10 @@ export function Hero() {
         <div className="flex-1 flex flex-col items-center text-center md:items-start md:text-left justify-center py-32 md:py-0 md:pr-12">
           <h1 className="font-display font-bold text-cream text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">
             <span className="text-gold">TARZINI</span>{" "}
-            BIZE BIRAK
+            BİZE BIRAK
           </h1>
           <p className="mt-6 text-cream/60 text-base md:text-lg max-w-lg font-body leading-relaxed">
-            Susehri&apos;nin berber salonu. Sac kesiminden sakal tasarimina, profesyonel erkek bakiminda fark yaratiyoruz.
+            Suşehri&apos;nin berber salonu. Saç kesiminden sakal tasarımına, profesyonel erkek bakımında fark yaratıyoruz.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
