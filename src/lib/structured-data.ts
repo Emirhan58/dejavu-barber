@@ -38,7 +38,7 @@ export function generateBusinessJsonLd(siteUrl: string) {
         closes: "23:30",
       },
     ],
-    image: `${siteUrl}/images/gallery/dejavu-kuafor.jpg`,
+    image: `${siteUrl}/images/gallery/dukkan/dejavu-kuafor.jpg`,
     priceRange: "$$",
     currenciesAccepted: "TRY",
     paymentAccepted: "Cash, Credit Card",

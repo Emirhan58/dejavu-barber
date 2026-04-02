@@ -37,7 +37,7 @@ export function GalleryGrid() {
       {/* Masonry grid */}
       {filteredImages.length === 0 ? (
         <p className="text-cream/50 text-center">
-          Henuz fotograf eklenmedi.
+          Henüz fotoğraf eklenmedi.
         </p>
       ) : (
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
@@ -50,16 +50,35 @@ export function GalleryGrid() {
               className="mb-4 break-inside-avoid overflow-hidden rounded-lg cursor-pointer"
               onClick={() => setLightboxIndex(index)}
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-                placeholder="blur"
-                blurDataURL={image.blurDataURL}
-                className="w-full h-auto object-cover hover:opacity-90 transition-opacity"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
+              {image.type === "video" ? (
+                <div className="relative aspect-[9/16] bg-base-medium flex items-center justify-center">
+                  <video
+                    src={image.src}
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-black/60 flex items-center justify-center">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <polygon points="5,3 19,12 5,21" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={image.width}
+                  height={image.height}
+                  placeholder="blur"
+                  blurDataURL={image.blurDataURL}
+                  className="w-full h-auto object-cover hover:opacity-90 transition-opacity"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              )}
             </motion.div>
           ))}
         </div>

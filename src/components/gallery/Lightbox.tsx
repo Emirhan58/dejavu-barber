@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
 interface LightboxProps {
-  images: { src: string; alt: string; width: number; height: number }[];
+  images: { src: string; alt: string; width: number; height: number; type?: "image" | "video" }[];
   initialIndex: number;
   onClose: () => void;
 }
@@ -46,14 +46,25 @@ export function Lightbox({ images, initialIndex, onClose }: LightboxProps) {
         onClick={(e) => e.stopPropagation()}
         className="relative max-h-[90vh] max-w-[90vw]"
       >
-        <Image
-          src={images[index].src}
-          alt={images[index].alt}
-          width={images[index].width}
-          height={images[index].height}
-          className="max-h-[90vh] w-auto object-contain"
-          sizes="90vw"
-        />
+        {images[index].type === "video" ? (
+          <video
+            key={images[index].src}
+            src={images[index].src}
+            controls
+            autoPlay
+            playsInline
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+          />
+        ) : (
+          <Image
+            src={images[index].src}
+            alt={images[index].alt}
+            width={images[index].width}
+            height={images[index].height}
+            className="max-h-[90vh] w-auto object-contain"
+            sizes="90vw"
+          />
+        )}
 
         <button
           onClick={prev}
