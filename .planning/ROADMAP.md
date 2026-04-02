@@ -76,10 +76,11 @@ Plans:
   2. Turkish meta tags and Open Graph tags are present, with og:image showing the shop exterior photo
   3. Site is live on a Vercel URL and loads correctly on both desktop and mobile browsers
   4. Lighthouse mobile score is 90+ for Performance, with LCP under 2.5 seconds
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md — JSON-LD structured data, Turkce meta/OG tagleri, sitemap, robots ve OG gorselleri
+- [ ] 04-02-PLAN.md — Performans optimizasyonu (dynamic imports), Vercel deploy ve Lighthouse dogrulama
 
 ## Progress
 
@@ -91,4 +92,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation & Design System | 2/3 | In Progress|  |
 | 2. Content Sections & Gallery | 3/3 | Complete   | 2026-04-01 |
 | 3. Animation Layer | 2/2 | Complete   | 2026-04-01 |
-| 4. SEO & Deploy | 0/1 | Not started | - |
+| 4. SEO & Deploy | 0/2 | Not started | - |
